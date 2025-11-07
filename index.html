@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Força W.A Tech | Academia Completa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#00f4c5',
+              brandDark: '#04121c',
+              brandGray: '#0b1f2d',
+              wa: '#25D366',
+              waHover: '#20b357',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+            },
+            boxShadow: {
+              neon: '0 0 25px rgba(0, 244, 197, 0.35)',
+              wa: '0 18px 35px rgba(37, 211, 102, 0.35)',
+            },
+            keyframes: {
+              rotateButton: {
+                '0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+                '50%': { transform: 'rotate(6deg) scale(1.05)' },
+              },
+            },
+            animation: {
+              rotateButton: 'rotateButton 2.6s ease-in-out infinite',
+            },
+          },
+        },
+      };
+    </script>
+	</head>
+  <body class="bg-brandDark text-white font-sans antialiased">
+    <div class="relative overflow-hidden">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/30 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-white">
+              Foto aqui!
+            </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brandDark via-brandDark/80 to-brandGray"></div>
+      </div>
+
+      <header class="sticky top-0 z-40 bg-brandDark/80 backdrop-blur border-b border-white/10">
+        <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-3 sm:flex-row sm:items-center sm:justify-between">
+			<div class="text-xs text-white/60">
+				<p class="font-semibold uppercase tracking-[0.5em] text-brand">Portfólio WA Tech</p>
+				<p class="mt-1 leading-relaxed">
+				  Este layout é totalmente personalizável: incluímos, removemos ou adaptamos seções para que o site reflita a identidade e o posicionamento da sua empresa.
+				</p>
+			  </div>
+			  
+          <div class="flex items-center justify-between gap-3">
+            <a href="#inicio" class="text-xl font-semibold tracking-widest text-brand">FORÇA W.A TECH</a>
+            <button
+              type="button"
+              data-menu-mobile-toggle
+              class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 p-2 text-white transition hover:border-brand hover:bg-brand/10 hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand/40 focus:ring-offset-2 focus:ring-offset-brandDark lg:hidden"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="sr-only">Abrir menu</span>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7h16M4 12h16M4 17h10" />
+              </svg>
+            </button>
+          </div>
+          <nav class="hidden items-center gap-8 text-sm font-medium text-white/80 lg:flex">
+            <a href="#inicio" class="transition hover:text-brand">Início</a>
+            <a href="#modalidades" class="transition hover:text-brand">Modalidades</a>
+            <a href="#experiencias" class="transition hover:text-brand">Experiências</a>
+            <a href="#depoimentos" class="transition hover:text-brand">Resultados</a>
+            <a href="#planos" class="transition hover:text-brand">Planos</a>
+            <div class="relative" data-menu="more">
+              <button
+                type="button"
+                data-menu="more-toggle"
+                class="inline-flex items-center gap-1 rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white/70 transition hover:border-brand hover:text-brand"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Mais
+                <svg class="h-3.5 w-3.5" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                  <path d="M2 4.5 6 8.5l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                </svg>
+              </button>
+              <div
+                data-menu="more-panel"
+                class="absolute right-0 top-full mt-3 hidden w-52 rounded-2xl border border-white/10 bg-brandDark/95 p-4 text-left shadow-lg shadow-brand/20"
+                role="menu"
+              >
+                <a href="#agenda" class="block rounded-lg px-3 py-2 text-sm text-white/70 transition hover:bg-brand/10 hover:text-brand" role="menuitem">Agenda</a>
+                <a href="#loja" class="block rounded-lg px-3 py-2 text-sm text-white/70 transition hover:bg-brand/10 hover:text-brand" role="menuitem">Loja</a>
+                <a href="#blog" class="block rounded-lg px-3 py-2 text-sm text-white/70 transition hover:bg-brand/10 hover:text-brand" role="menuitem">Conteúdo</a>
+                <a href="#equipe" class="block rounded-lg px-3 py-2 text-sm text-white/70 transition hover:bg-brand/10 hover:text-brand" role="menuitem">Equipe</a>
+                <a href="#localizacao" class="block rounded-lg px-3 py-2 text-sm text-white/70 transition hover:bg-brand/10 hover:text-brand" role="menuitem">Localização</a>
+                <a href="#contato" class="block rounded-lg px-3 py-2 text-sm text-white/70 transition hover:bg-brand/10 hover:text-brand" role="menuitem">Contato</a>
+              </div>
+            </div>
+				</nav>
+          <a
+            href="#contato"
+            class="hidden rounded-full bg-brand px-5 py-2 text-sm font-semibold text-brandDark shadow-neon transition hover:bg-white lg:inline-block"
+          >
+            Agende uma aula
+          </a>
+        </div>
+			</header>
+
+      <div
+        id="mobile-menu"
+        data-menu-mobile-panel
+        class="fixed inset-0 z-30 hidden lg:hidden"
+        aria-hidden="true"
+      >
+        <div class="absolute inset-0 bg-brandDark/70 backdrop-blur-sm"></div>
+        <div class="relative ml-auto flex h-full w-full max-w-sm flex-col gap-6 bg-brandGray p-6 shadow-lg shadow-brand/20">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold tracking-[0.3em] text-brand">FORÇA W.A TECH</span>
+            <button
+              type="button"
+              data-menu-mobile-close
+              class="inline-flex items-center justify-center rounded-full border border-white/15 p-2 text-white transition hover:border-brand hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand/40 focus:ring-offset-2 focus:ring-offset-brandGray"
+            >
+              <span class="sr-only">Fechar menu</span>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-2 flex flex-col gap-3 text-sm font-medium text-white">
+            <a href="#inicio" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Início</a>
+            <a href="#modalidades" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Modalidades</a>
+            <a href="#experiencias" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Experiências</a>
+            <a href="#depoimentos" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Resultados</a>
+            <a href="#planos" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Planos</a>
+            <div class="border-t border-white/10 pt-3 text-xs uppercase tracking-[0.3em] text-white/70">Mais</div>
+            <a href="#agenda" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Agenda</a>
+            <a href="#loja" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Loja</a>
+            <a href="#blog" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Conteúdo</a>
+            <a href="#equipe" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Equipe</a>
+            <a href="#localizacao" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Localização</a>
+            <a href="#contato" class="rounded-lg px-3 py-2 transition hover:bg-brand/10 hover:text-brand" data-menu-mobile-link>Contato</a>
+          </div>
+          <a
+            href="#contato"
+            class="mt-auto inline-flex items-center justify-center rounded-full bg-brand px-4 py-3 text-xs font-semibold uppercase tracking-wide text-brandDark shadow-neon transition hover:bg-white"
+            data-menu-mobile-link
+          >
+            Agendar aula agora
+          </a>
+        </div>
+      </div>
+
+      <main id="inicio" class="mx-auto max-w-6xl px-6">
+        <section class="flex flex-col gap-10 py-20 lg:flex-row lg:items-center lg:py-28">
+          <div class="flex-1 space-y-6">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Academia 360°</span>
+            <h1 class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              A evolução do seu corpo começa com uma experiência premium.
+            </h1>
+            <p class="max-w-xl text-base text-white/80 sm:text-lg">
+              Combine musculação de alto desempenho com artes marciais, dança, lutas e treinos funcionais. Cada ambiente foi projetado para performance, segurança e bem-estar.
+            </p>
+            <div class="flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#modalidades"
+                class="rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-brandDark shadow-neon transition hover:bg-white"
+              >
+                Conheça as modalidades
+              </a>
+              <a
+                href="#planos"
+                class="rounded-full border border-white/40 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-brand hover:text-brand"
+              >
+                Planos flexíveis
+              </a>
+            </div>
+          <div class="flex flex-wrap items-center gap-6 pt-4 text-xs uppercase tracking-widest text-white/70">
+              <div class="flex flex-col">
+                <span class="text-3xl font-semibold text-brand">24h</span>
+                <span>Acesso biométrico</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-3xl font-semibold text-brand">+80</span>
+                <span>Aulas semanais</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-3xl font-semibold text-brand">+20</span>
+                <span>Treinadores</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div class="rounded-3xl bg-white/5 p-6 shadow-xl shadow-brand/5 backdrop-blur">
+                <p class="text-sm font-semibold text-brand">Consultoria Personalizada</p>
+                <p class="mt-3 text-sm text-white/70">
+                  Inteligência de dados e avaliação física contínua para ajustar seu treino com precisão.
+                </p>
+              </div>
+              <div class="rounded-3xl bg-white/5 p-6 shadow-xl shadow-brand/5 backdrop-blur">
+                <p class="text-sm font-semibold text-brand">Lutas & Performance</p>
+                <p class="mt-3 text-sm text-white/70">
+                  Do tatame ao octógono: Jiu-Jitsu, Boxe, Capoeira, Muay Thai e MMA em estruturas profissionais.
+                </p>
+              </div>
+              <div class="rounded-3xl bg-white/5 p-6 shadow-xl shadow-brand/5 backdrop-blur">
+                <p class="text-sm font-semibold text-brand">Studio de Movimento</p>
+                <p class="mt-3 text-sm text-white/70">
+                  Ballet, dança e aulas coreografadas em salas climatizadas e com piso absorvente.
+                </p>
+              </div>
+              <div class="rounded-3xl bg-white/5 p-6 shadow-xl shadow-brand/5 backdrop-blur">
+                <p class="text-sm font-semibold text-brand">Bike Indoor & HIIT</p>
+                <p class="mt-3 text-sm text-white/70">
+                  Experiência imersiva de spinning, treinos coletivos e iluminação inteligente para motivar a turma.
+                </p>
+              </div>
+            </div>
+				</div>
+			</section>
+
+        <section id="modalidades" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <img src="https://images.unsplash.com/photo-1519311965067-37bd6c0bc575?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true" class="h-full w-full object-cover opacity-40" loading="lazy" />
+            <div class="absolute inset-0 bg-brandDark/85"></div>
+          </div>
+          <div class="relative mx-auto max-w-6xl px-6">
+            <div class="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <div class="max-w-3xl">
+                  <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Modalidades</span>
+                  <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Treinos para cada ritmo e objetivo</h2>
+                  <p class="mt-4 text-base text-white/70">
+                    Monte uma rotina híbrida entre força, artes marciais, dança, condicionamento e bem-estar. Nossa equipe integra dados de performance em tempo real para personalizar cada sessão.
+                  </p>
+                </div>
+                <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Musculação Inteligente</h3>
+                    <p class="mt-3 text-sm text-white/70">Área completa com equipamentos conectados, avaliação 3D de movimento e periodização digital.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Jiu-Jitsu & Grappling</h3>
+                    <p class="mt-3 text-sm text-white/70">Tatames profissionais, turmas kids, feminina e competição, além de registros de rolagem via vídeo.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Ballet & Jazz</h3>
+                    <p class="mt-3 text-sm text-white/70">Metodologia contemporânea com análise de postura, força de salto e turmas multi níveis.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Boxe & Muay Thai</h3>
+                    <p class="mt-3 text-sm text-white/70">Golpes técnicos, sparring assistido, projeção de potência e acompanhamento respiratório.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Capoeira & Cultura</h3>
+                    <p class="mt-3 text-sm text-white/70">Rodas com mestres convidados, musicalidade ao vivo e treino acrobático com foco em mobilidade.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">MMA & Preparação Física</h3>
+                    <p class="mt-3 text-sm text-white/70">Camp completo, treinos combinados, condicionamento funcional e análise de sparring.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Spin Room Imersivo</h3>
+                    <p class="mt-3 text-sm text-white/70">Bike indoor com sonorização 360°, métricas projetadas e ligação com seu wearable.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Funcional & HIIT</h3>
+                    <p class="mt-3 text-sm text-white/70">Circuitos de potência, sled, wall balls e ajustes de intensidade segundo seus dados.</p>
+                  </div>
+                  <div class="group rounded-2xl border border-white/10 bg-brandGray/70 p-6 transition hover:border-brand/80 hover:bg-brand/10">
+                    <h3 class="text-lg font-semibold text-brand">Yoga & Mobility</h3>
+                    <p class="mt-3 text-sm text-white/70">Respiração, alongamento guiado, mindfulness e suporte para recuperação ativa.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden lg:flex h-full items-center">
+                <div class="flex h-full min-h-[360px] w-full items-center justify-center rounded-3xl border border-white/10 bg-brandDark/20 text-sm font-semibold uppercase tracking-[0.35em] text-white shadow-xl shadow-brand/20">
+                  Foto aqui!
+                </div>
+              </div>
+            </div>
+				</div>
+			</section>
+
+        <section id="experiencias" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-6xl px-6">
+            <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+              <div class="rounded-3xl border border-white/10 bg-brandGray/80 p-10 backdrop-blur">
+                <h2 class="text-3xl font-semibold">Tecnologia que potencializa cada movimento</h2>
+                <p class="mt-4 text-sm text-white/70">
+                  Integração com wearables, acompanhamento em dashboard e ajustes em tempo real. Treine com feedback contínuo do seu corpo e dados acionáveis.
+                </p>
+                <ul class="mt-6 space-y-3 text-sm text-white/80">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand"></span>
+                    Avaliação 3D de postura, composição corporal e mobilidade com atualização automática.
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand"></span>
+                    Plano nutricional integrado aos objetivos, com lembretes inteligentes no app.
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand"></span>
+                    Comunidades exclusivas, desafios semanais e streaming das aulas no aplicativo.
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-8">
+                <div class="rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur">
+                  <h3 class="text-xl font-semibold text-brand">Experiência Força W.A Tech</h3>
+                  <div class="mt-8 grid gap-6 sm:grid-cols-2">
+                    <div>
+                      <p class="text-4xl font-semibold text-brand">01</p>
+                      <p class="mt-3 text-sm text-white/70">Recepção digital, lockers inteligentes e lounge com café e recovery.</p>
+                    </div>
+                    <div>
+                      <p class="text-4xl font-semibold text-brand">02</p>
+                      <p class="mt-3 text-sm text-white/70">Estúdios climatizados, iluminação cênica e sonorização premium.</p>
+                    </div>
+                    <div>
+                      <p class="text-4xl font-semibold text-brand">03</p>
+                      <p class="mt-3 text-sm text-white/70">Equipe multidisciplinar com fisioterapeutas, nutricionistas e coaches.</p>
+                    </div>
+                    <div>
+                      <p class="text-4xl font-semibold text-brand">04</p>
+                      <p class="mt-3 text-sm text-white/70">Eventos, campeonatos internos e jornadas exclusivas para alunos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative overflow-hidden rounded-3xl border border-white/10 shadow-lg shadow-brand/10">
+                  <div class="flex h-full min-h-[280px] w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+                    Foto aqui!
+                  </div>
+                  <div class="absolute inset-0 bg-brandDark/35"></div>
+                </div>
+              </div>
+            </div>
+				</div>
+			</section>
+
+        <section id="depoimentos" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-4xl text-center px-6">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Resultados reais</span>
+            <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Histórias de evolução Força W.A Tech</h2>
+            <p class="mt-4 text-base text-white/70">Veja conquistas de alunos em diferentes idades e modalidades. Deslize para conferir antes e depois com planos personalizados.</p>
+          </div>
+          <div class="relative mt-12 overflow-x-auto pb-6">
+            <div class="flex gap-6 scroll-m-6 snap-x snap-mandatory px-1">
+              <article class="min-w-[320px] snap-center rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                </div>
+                <div class="mt-5 flex items-center justify-between text-xs text-white/50">
+                  <span>Musculação · 28 anos</span>
+                  <span>12 semanas</span>
+                </div>
+                <h3 class="mt-3 text-lg font-semibold text-brand">Gustavo · Performance Builder</h3>
+                <p class="mt-2 text-sm text-white/70">“Ganhei 5kg de massa magra com treinos híbridos e acompanhamento de força máxima no app.”</p>
+							</article>
+              <article class="min-w-[320px] snap-center rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                </div>
+                <div class="mt-5 flex items-center justify-between text-xs text-white/50">
+                  <span>Ballet & Mobilidade · 17 anos</span>
+                  <span>6 meses</span>
+                </div>
+                <h3 class="mt-3 text-lg font-semibold text-brand">Sofia · Ballet Motion</h3>
+                <p class="mt-2 text-sm text-white/70">“Recuperei minha confiança no palco com mentoria de postura, força e aulas de jazz complementares.”</p>
+							</article>
+              <article class="min-w-[320px] snap-center rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                </div>
+                <div class="mt-5 flex items-center justify-between text-xs text-white/50">
+                  <span>MMA · 34 anos</span>
+                  <span>10 semanas</span>
+                </div>
+                <h3 class="mt-3 text-lg font-semibold text-brand">Miguel · MMA Fight Camp</h3>
+                <p class="mt-2 text-sm text-white/70">“Melhorei cardio e potência com sparrings monitorados e nutri esportiva integrada.”</p>
+							</article>
+              <article class="min-w-[320px] snap-center rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="flex h-36 w-full items-center justify-center rounded-2xl border border-white/30 bg-brandDark/25 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                </div>
+                <div class="mt-5 flex items-center justify-between text-xs text-white/50">
+                  <span>Capoeira · 42 anos</span>
+                  <span>4 meses</span>
+                </div>
+                <h3 class="mt-3 text-lg font-semibold text-brand">Helena · Axé Flow</h3>
+                <p class="mt-2 text-sm text-white/70">“Voltei às rodas com energia graças aos treinos de mobilidade, resistência e percussão ao vivo.”</p>
+							</article>
+						</div>
+          </div>
+          <div class="mt-10 flex flex-col items-center gap-3 text-center">
+            <p class="text-sm text-white/70">Quer ver seu resultado aqui? Compartilhe sua evolução com a hashtag <span class="font-semibold text-brand">#ForçaWATech</span>.</p>
+            <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-6 py-3 text-sm font-semibold text-brand transition hover:bg-brand hover:text-brandDark">Acompanhar comunidade</a>
+          </div>
+        </section>
+
+        <section id="agenda" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-5xl text-center px-6">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Agenda interativa</span>
+            <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Reserve sua aula favorita em segundos</h2>
+            <p class="mt-4 text-base text-white/70">Filtre por modalidade e encontre o melhor horário. Reservas confirmadas via app Força ou WhatsApp.</p>
+          </div>
+          <div class="relative mx-auto mt-10 max-w-6xl rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="flex flex-wrap gap-3" role="tablist" aria-label="Filtrar agenda">
+                <button type="button" class="agenda-filter rounded-full border border-brand/40 bg-brand/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark" data-filter="all">Todas</button>
+                <button type="button" class="agenda-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="musculacao">Musculação</button>
+                <button type="button" class="agenda-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="lutas">Lutas</button>
+                <button type="button" class="agenda-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="danca">Dança</button>
+                <button type="button" class="agenda-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="wellness">Wellness</button>
+              </div>
+              <a href="https://wa.me/5522999741139?text=Quero%20reservar%20uma%20aula%20na%20agenda%20Força%20W.A%20Tech" target="_blank" class="inline-flex items-center rounded-full bg-brand px-5 py-2 text-sm font-semibold text-brandDark shadow-neon transition hover:bg-white">Reservar pelo WhatsApp</a>
+            </div>
+            <div class="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
+              <div class="space-y-4" role="list">
+                <div class="agenda-item rounded-2xl border border-white/10 bg-brandGray/70 p-6 text-left transition hover:border-brand/70" data-category="musculacao">
+                  <div class="flex items-center justify-between text-xs text-white/50">
+                    <span>Segunda · 06h30</span>
+                    <span>Studio Power</span>
+                  </div>
+                  <h3 class="mt-3 text-lg font-semibold text-brand">Strength Lab · Musculação guiada</h3>
+                  <p class="mt-2 text-sm text-white/70">Avaliação de cargas, monitoramento de BPM e acompanhamento com coach de força.</p>
+                  <button type="button" class="agenda-cta mt-4 inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark" data-slot="Strength Lab - Segunda 06h30">Garantir minha vaga</button>
+                </div>
+                <div class="agenda-item rounded-2xl border border-white/10 bg-brandGray/70 p-6 text-left transition hover:border-brand/70" data-category="lutas">
+                  <div class="flex items-center justify-between text-xs text-white/50">
+                    <span>Terça · 19h00</span>
+                    <span>Octógono</span>
+                  </div>
+                  <h3 class="mt-3 text-lg font-semibold text-brand">Muay Thai Elite</h3>
+                  <p class="mt-2 text-sm text-white/70">Golpes técnicos, sparring supervisionado e acompanhamento em vídeo para feedback.</p>
+                  <button type="button" class="agenda-cta mt-4 inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark" data-slot="Muay Thai Elite - Terça 19h">Garantir minha vaga</button>
+                </div>
+                <div class="agenda-item rounded-2xl border border-white/10 bg-brandGray/70 p-6 text-left transition hover:border-brand/70" data-category="danca">
+                  <div class="flex items-center justify-between text-xs text-white/50">
+                    <span>Quarta · 20h00</span>
+                    <span>Studio Movimento</span>
+                  </div>
+                  <h3 class="mt-3 text-lg font-semibold text-brand">Ballet Contemporâneo</h3>
+                  <p class="mt-2 text-sm text-white/70">Aula para adultos com foco em mobilidade, técnica de linhas e expressão corporal.</p>
+                  <button type="button" class="agenda-cta mt-4 inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark" data-slot="Ballet Contemporâneo - Quarta 20h">Garantir minha vaga</button>
+                </div>
+                <div class="agenda-item rounded-2xl border border-white/10 bg-brandGray/70 p-6 text-left transition hover:border-brand/70" data-category="wellness">
+                  <div class="flex items-center justify-between text-xs text-white/50">
+                    <span>Quinta · 07h30</span>
+                    <span>Rooftop Zen</span>
+                  </div>
+                  <h3 class="mt-3 text-lg font-semibold text-brand">Sunrise Mobility & Breath</h3>
+                  <p class="mt-2 text-sm text-white/70">Rotina de alongamentos guiados, respiração consciente e liberação miofascial.</p>
+                  <button type="button" class="agenda-cta mt-4 inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark" data-slot="Sunrise Mobility - Quinta 07h30">Garantir minha vaga</button>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-brand/40 bg-brand/10 p-8 shadow-neon text-left">
+                <h3 class="text-xl font-semibold text-brand">Mentoria de performance</h3>
+                <p class="mt-4 text-sm text-white/70">Combine treinos com mentorias de mindset, estratégias de competição e coaching nutricional.</p>
+                <ul class="mt-6 space-y-3 text-sm text-white/80">
+                  <li class="flex items-center gap-3">
+                    <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/20 text-brand">✔</span>
+                    Plano recalculado a cada 30 dias
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/20 text-brand">✔</span>
+                    Sessões híbridas com coaches e especialistas
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/20 text-brand">✔</span>
+                    Suporte 24/7 via app e WhatsApp
+                  </li>
+                </ul>
+                <a href="#contato" class="mt-8 inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brandDark transition hover:bg-white">Agendar mentor consultivo</a>
+                <div class="mt-8 overflow-hidden rounded-2xl border border-white/10">
+                <div class="flex h-40 w-full items-center justify-center bg-brandDark/25 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                </div>
+              </div>
+            </div>
+				</div>
+			</section>
+
+        <section id="planos" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-4xl text-center px-6">
+            <h2 class="text-3xl font-semibold sm:text-4xl">Planos que evoluem com você</h2>
+            <p class="mt-4 text-base text-white/70">
+              Todos os planos incluem avaliação física, app integrado e participação em eventos especiais.
+            </p>
+          </div>
+          <div class="relative mx-auto mt-12 max-w-6xl grid gap-8 md:grid-cols-3">
+            <div class="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8 text-left">
+              <span class="text-sm font-semibold uppercase tracking-wide text-brand">Start</span>
+              <p class="mt-4 text-4xl font-semibold text-white">R$149<span class="text-base text-white/70">/mês</span></p>
+              <p class="mt-3 text-sm text-white/70">Acesso livre musculação, aulas coletivas selecionadas e avaliação trimestral.</p>
+              <ul class="mt-6 space-y-3 text-sm text-white/80">
+                <li>✔ Treinos guiados no app</li>
+                <li>✔ Sala de spinning 2x por semana</li>
+                <li>✔ Check-in ilimitado</li>
+              </ul>
+              <a href="#contato" class="mt-auto inline-flex items-center justify-center rounded-full border border-brand px-5 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-brandDark">Quero esse</a>
+            </div>
+            <div class="flex flex-col rounded-3xl border border-brand bg-brand/10 p-8 text-left shadow-neon">
+              <span class="text-sm font-semibold uppercase tracking-wide text-brand">Pro</span>
+              <p class="mt-4 text-4xl font-semibold text-white">R$219<span class="text-base text-white/70">/mês</span></p>
+              <p class="mt-3 text-sm text-white/70">Todas as modalidades, consultoria de performance e acesso a mentorias coletivas.</p>
+              <ul class="mt-6 space-y-3 text-sm text-white/80">
+                <li>✔ Personal coletivo 1x por semana</li>
+                <li>✔ Lutas e danças ilimitadas</li>
+                <li>✔ Eventos exclusivos</li>
+              </ul>
+              <a href="#contato" class="mt-auto inline-flex items-center justify-center rounded-full bg-brand px-5 py-2 text-sm font-semibold text-brandDark transition hover:bg-white">Plano recomendado</a>
+							</div>
+            <div class="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8 text-left">
+              <span class="text-sm font-semibold uppercase tracking-wide text-brand">Elite</span>
+              <p class="mt-4 text-4xl font-semibold text-white">Sob consulta</p>
+              <p class="mt-3 text-sm text-white/70">Programa completo com personal dedicado, preparação para competições e viagens.</p>
+              <ul class="mt-6 space-y-3 text-sm text-white/80">
+                <li>✔ Treino VIP agendado</li>
+                <li>✔ Nutrição e fisioterapia personalizados</li>
+                <li>✔ Viagens e camps internacionais</li>
+							</ul>
+              <a href="#contato" class="mt-auto inline-flex items-center justify-center rounded-full border border-brand px-5 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-brandDark">Falar com especialista</a>
+					</div>
+				</div>
+          <div class="relative mx-auto mt-12 flex max-w-5xl flex-col items-center justify-center gap-3 text-center">
+            <div class="flex h-56 w-full items-center justify-center rounded-3xl border border-white/10 bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <p class="text-sm text-white/70">Visite a unidade e receba uma aula experimental gratuita em qualquer plano.</p>
+				</div>
+			</section>
+
+        <section id="loja" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-6xl px-6 text-center">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Loja Força</span>
+            <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Produtos que impulsionam o seu treino</h2>
+            <p class="mt-4 text-base text-white/70">
+              Suplementos premium, roupas inteligentes e acessórios oficiais para você representar a Força W.A Tech dentro e fora dos treinos.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3" role="tablist" aria-label="Filtrar produtos">
+              <button type="button" class="loja-filter rounded-full border border-brand/40 bg-brand/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark" data-filter="all">Todos</button>
+              <button type="button" class="loja-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="suplementos">Suplementos</button>
+              <button type="button" class="loja-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="roupas">Roupas</button>
+              <button type="button" class="loja-filter rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/70 transition hover:border-brand hover:text-brand" data-filter="acessorios">Acessórios</button>
+            </div>
+          </div>
+          <div class="relative mx-auto mt-12 grid max-w-6xl gap-10 xl:grid-cols-[1.2fr_0.8fr] loja-list">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="loja-item rounded-3xl border border-white/10 bg-white/5 p-6 text-left transition hover:border-brand/70" data-category="suplementos">
+                <div class="relative overflow-hidden rounded-2xl">
+                  <div class="flex h-40 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="absolute inset-0 bg-brandDark/35"></div>
+                </div>
+                <div class="mt-5">
+                  <p class="text-sm font-semibold uppercase tracking-wide text-brand">Creatina Ultramax</p>
+                  <p class="mt-3 text-sm text-white/70">Micronizada com selo Creapure®, sugestões de dosagem via app e checklist de hidratação.</p>
+                  <p class="mt-4 text-lg font-semibold text-white">R$139</p>
+                  <div class="mt-4 flex flex-wrap items-center gap-2 text-xs text-white/50">
+                    <span class="rounded-full border border-white/20 px-3 py-1">300g</span>
+                    <span class="rounded-full border border-white/20 px-3 py-1">500g</span>
+                  </div>
+                  <div class="mt-5 flex flex-wrap gap-3">
+                    <button type="button" class="inline-flex rounded-full bg-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brandDark transition hover:bg-white">Adicionar</button>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark">Comprar agora</a>
+                  </div>
+                </div>
+              </div>
+              <div class="loja-item rounded-3xl border border-white/10 bg-white/5 p-6 text-left transition hover:border-brand/70" data-category="suplementos">
+                <div class="relative overflow-hidden rounded-2xl">
+                  <div class="flex h-40 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="absolute inset-0 bg-brandDark/35"></div>
+                </div>
+                <div class="mt-5">
+                  <p class="text-sm font-semibold uppercase tracking-wide text-brand">Pré-treino Ignite</p>
+                  <p class="mt-3 text-sm text-white/70">Beta-alanina, citrulina e cafeína controlada. Alertas sobre janelas ideais de consumo.</p>
+                  <p class="mt-4 text-lg font-semibold text-white">R$159</p>
+                  <div class="mt-4 flex flex-wrap gap-3">
+                    <button type="button" class="inline-flex rounded-full bg-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brandDark transition hover:bg-white">Adicionar</button>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark">Comprar agora</a>
+                  </div>
+                </div>
+              </div>
+              <div class="loja-item rounded-3xl border border-white/10 bg-white/5 p-6 text-left transition hover:border-brand/70" data-category="suplementos">
+                <div class="relative overflow-hidden rounded-2xl">
+                  <div class="flex h-40 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="absolute inset-0 bg-brandDark/35"></div>
+                </div>
+                <div class="mt-5">
+                  <p class="text-sm font-semibold uppercase tracking-wide text-brand">Protein Recovery</p>
+                  <p class="mt-3 text-sm text-white/70">Whey isolado + colágeno peptídico, perfeito para pós-luta e reconstrução muscular acelerada.</p>
+                  <p class="mt-4 text-lg font-semibold text-white">R$189</p>
+                  <div class="mt-4 flex flex-wrap items-center gap-2 text-xs text-white/50">
+                    <span class="rounded-full border border-white/20 px-3 py-1">Baunilha</span>
+                    <span class="rounded-full border border-white/20 px-3 py-1">Chocolate</span>
+                  </div>
+                  <div class="mt-5 flex flex-wrap gap-3">
+                    <button type="button" class="inline-flex rounded-full bg-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brandDark transition hover:bg-white">Adicionar</button>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark">Comprar agora</a>
+                  </div>
+                </div>
+              </div>
+              <div class="loja-item rounded-3xl border border-white/10 bg-white/5 p-6 text-left transition hover:border-brand/70" data-category="suplementos">
+                <div class="relative overflow-hidden rounded-2xl">
+                  <div class="flex h-40 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="absolute inset-0 bg-brandDark/35"></div>
+                </div>
+                <div class="mt-5">
+                  <p class="text-sm font-semibold uppercase tracking-wide text-brand">Pack Saúde Integrada</p>
+                  <p class="mt-3 text-sm text-white/70">Ômega 3, multivitamínico e magnésio com lembretes automáticos e acompanhamento nutricional.</p>
+                  <p class="mt-4 text-lg font-semibold text-white">R$249</p>
+                  <div class="mt-5 flex flex-wrap gap-3">
+                    <button type="button" class="inline-flex rounded-full bg-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brandDark transition hover:bg-white">Adicionar</button>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark">Comprar agora</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-8">
+              <div class="loja-item rounded-3xl border border-brand/40 bg-brand/10 p-10 text-left shadow-neon" data-category="roupas">
+                <div class="relative overflow-hidden rounded-3xl border border-brand/30">
+                  <div class="flex h-48 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="absolute inset-0 bg-brandDark/30"></div>
+                </div>
+                <h3 class="mt-6 text-2xl font-semibold text-brand">Coleção Lifestyle</h3>
+                <p class="mt-4 text-sm text-white/70">Tecidos respiráveis, anti-odor e com QR Code para playlists exclusivas do estúdio.</p>
+              <div class="mt-5 flex flex-wrap gap-3 text-xs text-white/70">
+                  <span class="rounded-full border border-white/20 px-3 py-1">PP</span>
+                  <span class="rounded-full border border-white/20 px-3 py-1">P</span>
+                  <span class="rounded-full border border-white/20 px-3 py-1">M</span>
+                  <span class="rounded-full border border-white/20 px-3 py-1">G</span>
+                  <span class="rounded-full border border-white/20 px-3 py-1">GG</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-sm text-white/80">
+                  <li>✔ Camiseta DryFit Força — R$119</li>
+                  <li>✔ Calça Jogger TechFlex — R$179</li>
+                  <li>✔ Top Ballet Motion — R$139</li>
+                  <li>✔ Kimono Jiu-Jitsu Pro — R$329</li>
+                </ul>
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <a href="#contato" class="inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brandDark transition hover:bg-white">Reservar prova</a>
+                  <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-6 py-3 text-sm font-semibold text-brand transition hover:bg-brand hover:text-brandDark">Comprar agora</a>
+                </div>
+              </div>
+              <div class="loja-item rounded-3xl border border-white/10 bg-white/5 p-10 text-left backdrop-blur" data-category="acessorios">
+                <div class="relative overflow-hidden rounded-3xl">
+                  <div class="flex h-48 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">Foto aqui!</div>
+                  <div class="absolute inset-0 bg-brandDark/30"></div>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold">Acessórios indispensáveis</h3>
+                <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <p class="text-sm font-semibold text-brand">Luvas Boxing Strike</p>
+                    <p class="text-xs text-white/70">Proteção tripla e ajuste anatômico.</p>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-brand">Corda Smart HIIT</p>
+                    <p class="text-xs text-white/70">Contagem via Bluetooth no app.</p>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-brand">Garrafa térmica 1L</p>
+                    <p class="text-xs text-white/70">Aço inox, mantém temperatura por 12h.</p>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-brand">Faixas de mobilidade</p>
+                    <p class="text-xs text-white/70">3 resistências, indicação por modalidade.</p>
+                  </div>
+                </div>
+                <p class="mt-6 text-sm text-white/70">Retirada imediata na recepção ou entrega expressa em 2h na região metropolitana.</p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-5 py-2 text-xs font-semibold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-brandDark">Comprar agora</a>
+                  <a href="#contato" class="inline-flex items-center rounded-full bg-brand px-5 py-2 text-xs font-semibold uppercase tracking-wide text-brandDark transition hover:bg-white">Falar com consultor</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative mx-auto mt-12 flex max-w-5xl flex-col items-center gap-3 text-center">
+              <p class="text-sm text-white/70">Membros Pro e Elite ganham 10% OFF em toda a loja física e digital.</p>
+            <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex items-center rounded-full border border-brand px-6 py-3 text-sm font-semibold text-brand transition hover:bg-brand hover:text-brandDark">Acessar loja online</a>
+          </div>
+        </section>
+
+        <section id="blog" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-6xl px-6 text-center">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Conteúdo premium</span>
+            <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Insights rápidos para turbinar seus treinos</h2>
+            <p class="mt-4 text-base text-white/70">Nutrição, mobilidade, mindset e performance explicados por quem vive dentro do box e do tatame.</p>
+          </div>
+          <div class="relative mx-auto mt-12 grid max-w-6xl gap-8 md:grid-cols-3">
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur transition hover:border-brand/80">
+              <div class="relative overflow-hidden rounded-2xl">
+                <div class="flex h-48 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white transition duration-500 group-hover:scale-105">Foto aqui!</div>
+                <div class="absolute inset-0 bg-brandDark/25"></div>
+              </div>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-brand">Nutrição esportiva</p>
+              <h3 class="mt-3 text-lg font-semibold text-white">Guia de creatina e timing de carbo para treinos duplos</h3>
+              <p class="mt-2 text-sm text-white/70">Aprenda como periodizar a ingestão de creatina, combinar com carboidratos e potencializar força e recuperação.</p>
+              <a href="https://www.watechevoce.com.br" target="_blank" class="mt-4 inline-flex items-center text-sm font-semibold text-brand transition hover:text-white">Ler matéria completa →</a>
+            </article>
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur transition hover:border-brand/80">
+              <div class="relative overflow-hidden rounded-2xl">
+                <div class="flex h-48 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white transition duration-500 group-hover:scale-105">Foto aqui!</div>
+                <div class="absolute inset-0 bg-brandDark/25"></div>
+              </div>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-brand">Mobilidade & prevenção</p>
+              <h3 class="mt-3 text-lg font-semibold text-white">3 rotinas de mobilidade para sobrevivência no tatame</h3>
+              <p class="mt-2 text-sm text-white/70">Sequências de 15 minutos para ombro, quadril e coluna que liberam seu jogo no Jiu-Jitsu e no MMA.</p>
+              <a href="https://www.watechevoce.com.br" target="_blank" class="mt-4 inline-flex items-center text-sm font-semibold text-brand transition hover:text-white">Abrir guia prático →</a>
+            </article>
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur transition hover:border-brand/80">
+              <div class="relative overflow-hidden rounded-2xl">
+                <div class="flex h-48 w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white transition duration-500 group-hover:scale-105">Foto aqui!</div>
+                <div class="absolute inset-0 bg-brandDark/25"></div>
+              </div>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-brand">Mindset & recuperação</p>
+              <h3 class="mt-3 text-lg font-semibold text-white">Sono estratégico: como recuperar em semanas de carga alta</h3>
+              <p class="mt-2 text-sm text-white/70">Checklist de higiene do sono, suplementação e respiração para manter a mente focada e o corpo pronto.</p>
+              <a href="https://www.watechevoce.com.br" target="_blank" class="mt-4 inline-flex items-center text-sm font-semibold text-brand transition hover:text-white">Explorar o conteúdo →</a>
+            </article>
+          </div>
+          <div class="relative mx-auto mt-10 flex max-w-5xl flex-col items-center gap-3 text-center">
+            <p class="text-sm text-white/70">Receba novos conteúdos quinzenais direto no WhatsApp ou e-mail.</p>
+            <a href="#contato" class="inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brandDark transition hover:bg-white">Quero dicas personalizadas</a>
+          </div>
+        </section>
+
+        <section id="equipe" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto max-w-6xl px-6 text-center">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Equipe Força</span>
+            <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Coaches que vivem performance de perto</h2>
+            <p class="mt-4 text-base text-white/70">Cada coach une formação técnica, experiência em competição e cuidados com a saúde mental.</p>
+          </div>
+          <div class="relative mx-auto mt-12 grid max-w-6xl gap-8 md:grid-cols-3">
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-8 text-left backdrop-blur">
+              <div class="relative mx-auto h-40 w-40 overflow-hidden rounded-full border border-brand/40 bg-brandDark/25 text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-white flex items-center justify-center">
+                Foto aqui!
+              </div>
+              <h3 class="mt-6 text-xl font-semibold text-brand">Felipe Andrade</h3>
+              <p class="text-sm text-white/70">Head Coach Musculação & Performance</p>
+              <p class="mt-3 text-sm text-white/70">Especialista em biomecânica e força máxima. Criou o protocolo Strength Lab que otimiza ganhos em 12 semanas.</p>
+              <blockquote class="mt-4 rounded-2xl border border-brand/20 bg-brand/10 p-4 text-xs text-white/70">“Tecnologia é ferramenta. O diferencial é interpretação humana e feedback constante.”</blockquote>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-8 text-left backdrop-blur">
+              <div class="relative mx-auto h-40 w-40 overflow-hidden rounded-full border border-brand/40 bg-brandDark/25 text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-white flex items-center justify-center">
+                Foto aqui!
+              </div>
+              <h3 class="mt-6 text-xl font-semibold text-brand">Yasmin Lemos</h3>
+              <p class="text-sm text-white/70">Diretora de Artes & Movimento</p>
+              <p class="mt-3 text-sm text-white/70">Bailarina e fisioterapeuta, integra ballet, jazz e mobilidade para elevar técnica e prevenir lesões.</p>
+              <blockquote class="mt-4 rounded-2xl border border-brand/20 bg-brand/10 p-4 text-xs text-white/70">“Cada aula é coreografada com base em dados de esforço e impacto individual.”</blockquote>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-8 text-left backdrop-blur">
+              <div class="relative mx-auto h-40 w-40 overflow-hidden rounded-full border border-brand/40 bg-brandDark/25 text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-white flex items-center justify-center">
+                Foto aqui!
+              </div>
+              <h3 class="mt-6 text-xl font-semibold text-brand">Renato Moreira</h3>
+              <p class="text-sm text-white/70">Head de Lutas & Estratégia</p>
+              <p class="mt-3 text-sm text-white/70">Faixa-preta 3º grau em Jiu-Jitsu e treinador de MMA. Lidera camps com análise de vídeo e plano mental.</p>
+              <blockquote class="mt-4 rounded-2xl border border-brand/20 bg-brand/10 p-4 text-xs text-white/70">“Disciplina é liberdade. Nosso foco é construir atletas resilientes dentro e fora do tatame.”</blockquote>
+            </article>
+          </div>
+        </section>
+
+        <section id="localizacao" class="relative overflow-hidden py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/20 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+          </div>
+          <div class="relative mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_0.9fr]">
+            <div class="space-y-6">
+              <span class="inline-flex items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">Mapa & experiência</span>
+              <h2 class="text-3xl font-semibold sm:text-4xl">Estamos no coração do centro tech</h2>
+              <p class="text-sm text-white/70">Rua da Evolução, 360 · Centro Tech · São Paulo/SP<br />Estacionamento conveniado e bike station 24h.</p>
+              <div class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <p class="text-xs uppercase tracking-wide text-white/40">Destaques da unidade</p>
+                <ul class="mt-4 space-y-3 text-sm text-white/70">
+                  <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>Área de musculação com 1.000m² e vista panorâmica.</li>
+                  <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>Tatame olímpico, octógono oficial e studio ballet com piso flutuante.</li>
+                  <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-brand"></span>Rooftop para aulas outdoor, eventos e sessões de recovery.</li>
+					</ul>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://goo.gl/maps/9UVrZPgJ9xE2" target="_blank" class="inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brandDark transition hover:bg-white">Ver rota no Google Maps</a>
+                <a href="#contato" class="inline-flex items-center rounded-full border border-brand px-6 py-3 text-sm font-semibold text-brand transition hover:bg-brand hover:text-brandDark">Agendar visita guiada</a>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-3xl border border-white/10 shadow-lg shadow-brand/10">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true" class="h-full w-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-brandDark/25"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contato" class="relative overflow-hidden py-16 sm:py-20">
+          <div class="absolute inset-0 -z-10">
+            <div class="flex h-full w-full items-center justify-center bg-brandDark/15 text-xs font-semibold uppercase tracking-[0.24em] text-white">
+              Foto aqui!
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-brandDark/95 via-brandDark/85 to-brandGray/90"></div>
+          </div>
+          <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-start">
+              <div class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:p-10">
+                <h2 class="text-3xl font-semibold">Agende sua experiência</h2>
+                <p class="mt-4 text-sm text-white/70">
+                  Preencha o formulário e nossa equipe retorna em até 24 horas para montar o plano ideal e oferecer uma aula experimental.
+                </p>
+                <form class="mt-8 space-y-5">
+                  <div>
+                    <label for="name" class="text-xs font-semibold uppercase tracking-wide text-white/70">Nome completo</label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Seu nome"
+                      class="mt-2 w-full rounded-xl border border-white/10 bg-brandGray/80 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/40"
+                    />
+                  </div>
+                  <div class="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <label for="phone" class="text-xs font-semibold uppercase tracking-wide text-white/70">Telefone</label>
+                      <input
+                        id="phone"
+                        type="tel"
+                        placeholder="(00) 00000-0000"
+                        class="mt-2 w-full rounded-xl border border-white/10 bg-brandGray/80 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/40"
+                      />
+                    </div>
+                    <div>
+                      <label for="email" class="text-xs font-semibold uppercase tracking-wide text-white/70">E-mail</label>
+                      <input
+                        id="email"
+                        type="email"
+                        placeholder="voce@email.com"
+                        class="mt-2 w-full rounded-xl border border-white/10 bg-brandGray/80 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/40"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="modality" class="text-xs font-semibold uppercase tracking-wide text-white/70">Modalidade de interesse</label>
+                    <select
+                      id="modality"
+                      class="mt-2 w-full rounded-xl border border-white/10 bg-brandGray/80 px-4 py-3 text-sm text-white focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/40"
+                    >
+                      <option class="bg-brandGray text-white">Musculação</option>
+                      <option class="bg-brandGray text-white">Jiu-Jitsu</option>
+                      <option class="bg-brandGray text-white">Ballet</option>
+                      <option class="bg-brandGray text-white">Boxe</option>
+                      <option class="bg-brandGray text-white">Capoeira</option>
+                      <option class="bg-brandGray text-white">MMA</option>
+                      <option class="bg-brandGray text-white">Spinning</option>
+                      <option class="bg-brandGray text-white">Funcional & HIIT</option>
+                      <option class="bg-brandGray text-white">Outro</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="message" class="text-xs font-semibold uppercase tracking-wide text-white/70">Mensagem</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      placeholder="Conte-nos sobre seus objetivos"
+                      class="mt-2 w-full rounded-xl border border-white/10 bg-brandGray/80 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/40"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="button"
+                    class="mt-2 w-full rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brandDark shadow-neon transition hover:bg-white"
+                  >
+                    Quero minha aula teste
+                  </button>
+                </form>
+              </div>
+              <aside class="rounded-3xl border border-brand/40 bg-brand/10 p-6 shadow-neon sm:p-10">
+                <div class="space-y-4">
+                  <h3 class="text-xl font-semibold text-brand">Infraestrutura Força W.A Tech</h3>
+                  <p class="mt-4 text-sm text-white/70">
+                    Rua da Evolução, 360 - Centro Tech, São Paulo - SP<br />
+                    Atendimento todos os dias, das 5h às 23h.
+                  </p>
+                </div>
+                <div class="mt-6 space-y-3 text-sm text-white/70">
+                  <p><span class="font-semibold text-brand">Telefone:</span> (11) 4000-0000</p>
+                  <p><span class="font-semibold text-brand">WhatsApp:</span> (11) 98888-0000</p>
+                  <p><span class="font-semibold text-brand">E-mail:</span> contato@watechevoce.com.br</p>
+                </div>
+                <div class="mt-8">
+                  <p class="text-xs uppercase tracking-wide text-white/40">Conecte-se</p>
+                  <div class="mt-4 flex flex-wrap items-center gap-3">
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/50 bg-brand/10 text-brand transition hover:bg-brand hover:text-brandDark" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5zm5.75-3.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z" />
+                      </svg>
+                    </a>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/50 bg-brand/10 text-brand transition hover:bg-brand hover:text-brandDark" aria-label="Facebook">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+                        <path d="M13.5 9H16l.5-3h-3V4.5a1 1 0 0 1 1-1h1.5V1h-2.5a4 4 0 0 0-4 4V6H7v3h2.5v9h3V9z" />
+                      </svg>
+                    </a>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/50 bg-brand/10 text-brand transition hover:bg-brand hover:text-brandDark" aria-label="X">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+                        <path d="M4 4h3.4l4.05 5.27L15.5 4H20l-7.1 8 6.8 8H16.3l-4.4-5.82L7.7 20H4l7.14-8z" />
+                      </svg>
+                    </a>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/50 bg-brand/10 text-brand transition hover:bg-brand hover:text-brandDark" aria-label="TikTok">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+                        <path d="M14.5 3h2.7a5.82 5.82 0 0 0 1.73 4.15A6.07 6.07 0 0 0 21.5 8v2.6a8.15 8.15 0 0 1-3.8-1V16a5.53 5.53 0 1 1-5.53-5.53 5.65 5.65 0 0 1 1.33.17V6.22A8.41 8.41 0 0 1 14.5 3zm-2.63 9.57A2.53 2.53 0 1 0 14.4 15a1.85 1.85 0 0 0-.07-.47 5.44 5.44 0 0 1-2.46.61z" />
+                      </svg>
+                    </a>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/50 bg-brand/10 text-brand transition hover:bg-brand hover:text-brandDark" aria-label="YouTube">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+                        <path d="M21.6 7.2c-.2-.9-.9-1.5-1.8-1.6C17.4 5.3 12 5.3 12 5.3s-5.4 0-7.8.3c-.9.1-1.6.7-1.8 1.6-.3 1.2-.3 3.6-.3 3.6s0 2.4.3 3.6c.2.9.9 1.6 1.8 1.7 2.4.2 7.8.2 7.8.2s5.4 0 7.8-.3c.9-.1 1.6-.8 1.8-1.7.3-1.2.3-3.6.3-3.6s0-2.4-.3-3.6zM9.75 14.02V8.98l4.52 2.52z" />
+                      </svg>
+                    </a>
+                    <a href="https://www.watechevoce.com.br" target="_blank" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/50 bg-brand/10 text-brand transition hover:bg-brand hover:text-brandDark" aria-label="WhatsApp">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+                        <path d="M12.04 2a9.94 9.94 0 0 0-8.54 15.13L2 22l4.99-1.5A9.94 9.94 0 1 0 12.04 2zm0 2a7.94 7.94 0 0 1 6.56 12.5l-.23.35a1 1 0 0 0-.11.81l.5 1.76-1.83-.55a1 1 0 0 0-.76.09l-.35.2a7.94 7.94 0 0 1-11.5-9.53l.16-.41a1 1 0 0 0-.16-.96l-1.1-1.34 1.7.53a1 1 0 0 0 .9-.18l.35-.26A7.93 7.93 0 0 1 12.04 4zm-3.7 3.41c-.23 0-.58.08-.9.43s-1.18 1.15-1.18 2.78 1.21 3.22 1.38 3.44 2.3 3.52 5.64 4.79c2.09.82 2.51.66 2.96.62s1.46-.6 1.66-1.18.2-1.08.14-1.19-.21-.17-.43-.29-1.46-.72-1.68-.8-.39-.12-.55.12-.63.8-.77.96-.28.18-.51.07-1-.37-1.9-1.17c-.7-.62-1.17-1.38-1.3-1.61s0-.38.11-.5.23-.26.35-.41.15-.23.23-.38.04-.29-.01-.41-.55-1.33-.75-1.82-.4-.42-.54-.43z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/10 bg-brandDark/80 py-10">
+        <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-xs uppercase tracking-[0.3em] text-white/40">FORÇA W.A TECH · Academia de Alta Performance</p>
+          <p class="text-xs text-white/40">© <span id="year"></span> Força W.A Tech. Todos os direitos reservados.</p>
+        </div>
+			</footer>
+    </div>
+
+    <button
+      type="button"
+      data-scroll-top
+      class="fixed bottom-5 left-5 z-[9998] flex items-center gap-2 rounded-full border border-white/20 bg-brand/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-neon transition-all duration-300 hover:bg-brand hover:text-brandDark focus:outline-none focus:ring-2 focus:ring-brand/40 focus:ring-offset-2 focus:ring-offset-brandDark opacity-0 pointer-events-none translate-y-4"
+      aria-label="Voltar ao topo"
+      aria-hidden="true"
+    >
+      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+        <path d="M12 5a1 1 0 0 1 .78.37l6 7a1 1 0 0 1-1.56 1.26L13 8.59V19a1 1 0 0 1-2 0V8.59l-4.22 5.04A1 1 0 0 1 5.22 12.4l6-7A1 1 0 0 1 12 5Z" />
+      </svg>
+      Topo
+    </button>
+
+    <!-- Botão WhatsApp flutuante -->
+    <a
+      href="https://wa.me/5522999741139?text=Ol%C3%A1%20WATech!%20Vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20digitais%20da%20WATech.%20%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-5 right-5 z-[9999] inline-flex items-center justify-center rounded-full bg-wa p-3 text-white shadow-wa transition-transform hover:scale-110 hover:bg-waHover focus:outline-none focus:ring-2 focus:ring-wa focus:ring-offset-2 focus:ring-offset-brandDark animate-rotateButton"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="Ícone do WhatsApp"
+        class="h-10 w-10 transition-transform"
+        width="40"
+        height="40"
+        loading="lazy"
+      />
+    </a>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      const moreMenu = document.querySelector('[data-menu="more"]');
+      if (moreMenu) {
+        const toggleButton = moreMenu.querySelector('[data-menu="more-toggle"]');
+        const panel = moreMenu.querySelector('[data-menu="more-panel"]');
+
+        const closePanel = () => {
+          panel.classList.add('hidden');
+          toggleButton.setAttribute('aria-expanded', 'false');
+        };
+
+        toggleButton.addEventListener('click', (event) => {
+          event.stopPropagation();
+          const isHidden = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden', !isHidden);
+          toggleButton.setAttribute('aria-expanded', String(isHidden));
+        });
+
+        panel.addEventListener('click', (event) => event.stopPropagation());
+
+        document.addEventListener('click', (event) => {
+          if (!moreMenu.contains(event.target)) {
+            closePanel();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            closePanel();
+          }
+        });
+      }
+
+      const mobileToggle = document.querySelector('[data-menu-mobile-toggle]');
+      const mobilePanel = document.querySelector('[data-menu-mobile-panel]');
+
+      if (mobileToggle && mobilePanel) {
+        const mobileCloseButton = mobilePanel.querySelector('[data-menu-mobile-close]');
+        const mobileLinks = mobilePanel.querySelectorAll('[data-menu-mobile-link]');
+
+        const openMobileMenu = () => {
+          mobilePanel.classList.remove('hidden');
+          document.body.classList.add('overflow-hidden');
+          mobileToggle.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeMobileMenu = () => {
+          mobilePanel.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = !mobilePanel.classList.contains('hidden');
+          if (isOpen) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+
+        if (mobileCloseButton) {
+          mobileCloseButton.addEventListener('click', closeMobileMenu);
+        }
+
+        mobilePanel.addEventListener('click', (event) => {
+          if (event.target === mobilePanel) {
+            closeMobileMenu();
+          }
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            closeMobileMenu();
+          }
+        });
+      }
+
+      const scrollTopButton = document.querySelector('[data-scroll-top]');
+      if (scrollTopButton) {
+        const updateScrollTopButton = () => {
+          const doc = document.documentElement;
+          const scrollable = Math.max(doc.scrollHeight - doc.clientHeight, 0);
+          const threshold = scrollable * 0.5;
+          const scrolled = doc.scrollTop || document.body.scrollTop;
+          const shouldShow = scrolled > threshold;
+          scrollTopButton.classList.toggle('opacity-0', !shouldShow);
+          scrollTopButton.classList.toggle('pointer-events-none', !shouldShow);
+          scrollTopButton.classList.toggle('translate-y-4', !shouldShow);
+          scrollTopButton.setAttribute('aria-hidden', String(!shouldShow));
+        };
+
+        window.addEventListener('scroll', updateScrollTopButton, { passive: true });
+        window.addEventListener('resize', updateScrollTopButton);
+        scrollTopButton.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        updateScrollTopButton();
+      }
+
+      const setFilterButtonState = (button, isActive) => {
+        const isAll = button.dataset.filter === 'all';
+        button.classList.remove('bg-brand', 'text-brandDark', 'border-brand');
+        button.classList.remove('border-white/20', 'text-white/70', 'bg-brand/10', 'border-brand/40', 'text-brand');
+
+        if (isActive) {
+          button.classList.add('bg-brand', 'text-brandDark', 'border-brand');
+        } else if (isAll) {
+          button.classList.add('bg-brand/10', 'border-brand/40', 'text-brand');
+        } else {
+          button.classList.add('border-white/20', 'text-white/70');
+        }
+      };
+
+      const initFilterControls = (buttonSelector, itemSelector) => {
+        const buttons = Array.from(document.querySelectorAll(buttonSelector));
+        const items = Array.from(document.querySelectorAll(itemSelector));
+        if (!buttons.length) return;
+
+        const setState = (filterValue) => {
+          buttons.forEach((button) => setFilterButtonState(button, button.dataset.filter === filterValue));
+          items.forEach((item) => {
+            const categories = (item.dataset.category || '').split(',').map((value) => value.trim());
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        };
+
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => setState(button.dataset.filter));
+        });
+
+        setState(buttons[0].dataset.filter || 'all');
+      };
+
+      initFilterControls('.agenda-filter', '.agenda-item');
+      initFilterControls('.loja-filter', '.loja-item');
+
+      document.querySelectorAll('.agenda-cta').forEach((button) => {
+        button.addEventListener('click', () => {
+          const slot = button.dataset.slot || 'uma aula';
+          const message = `Olá Força W.A Tech! Quero reservar minha vaga para ${slot}.`;
+          const url = `https://wa.me/5522999741139?text=${encodeURIComponent(message)}`;
+          window.open(url, '_blank');
+        });
+      });
+    </script>
+	</body>
+</html>
